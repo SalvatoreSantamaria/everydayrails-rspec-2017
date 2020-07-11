@@ -23,6 +23,11 @@ module Api
       end
     end
 
+    def delete 
+      @project = Project.find(params[:id])
+      @project.delete
+    end
+
     private
 
     def authenticate_user_from_token!
